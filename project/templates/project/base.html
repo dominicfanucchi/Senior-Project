@@ -4,13 +4,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="{% static 'project/style.css' %}">
+    {% block page_css %} {% endblock %}
     
-    <title>Home | Senior Project</title>
+    <title>{% block title %}Senior Project | Home{% endblock %}</title>
 </head>
 <body>
-    
+    <div class="sidenav">
+        <a href="">Home</a>
+        <a href="">Speech</a>
+        <a href="">NLP</a>
+        <a href="">Register</a>
+        <a href="">Login</a>
+        <a href="">Logout</a>
+    </div>
+    <div id="content" name="content" class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
 </body>
+{% block page_script %}{% endblock %}
 </html>

@@ -5,4 +5,8 @@ from . import views
 app_name = 'senior project'
 urlpatterns = [
     path('', views.frontpage, name='frontpage'),
+
+    path('speech/', views.speech, name='speech'),
+    # path(),
+
 ]

@@ -1,0 +1,36 @@
+{% extends "project/base.html" %}
+{% load static %}
+
+{% block page_css %}
+<link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1"
+      crossorigin="anonymous"
+    />
+{% endblock %}
+
+{% block title %} Senior Project | Speech Recognition{% endblock %}
+
+{% block content %}
+<div class="mt-4" id="div_language">
+    <h2 class="mb-3 text-dark">Select Language</h2>
+    <select class="form-select bg-secondary text-dark" id="select_language" onchange="updateCountry()"></select>
+    <select class="form-select bg-secondary text-dark mt-2" id="select_dialect"></select>
+  </div>
+  <h2 class="mt-4 text-dark">Transcript</h2>
+  <div class="p-3" style="border: 1px solid gray; height: 300px; border-radius: 8px;">
+    <span id="final" class="text-dark"></span>
+    <span id="interim" class="text-secondary"></span>
+  </div>
+  <div class="mt-4">
+    <button class="btn btn-success" id="start">Start</button>
+    <button class="btn btn-danger" id="stop">Stop</button>
+    <p id="status" class="lead mt-3 text-dark" style="display: none">Listenting ...</p>
+  </div>
+{% endblock %}
+
+{% block page_script %}
+<script type="text/javascript" src="{% static 'project/js/language.js' %}"></script>
+<script type="text/javascript" src"{% static 'project/js/speechRecognition.js' %}"></script>
+{% endblock %}

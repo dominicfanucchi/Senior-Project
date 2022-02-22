@@ -1,5 +1,10 @@
 :root {
-    --background: #000;
+    --background: #212529;
+    --primary-gradient: linear-gradient(0deg, rgba(57,153,200,1) 0%, rgba(57,153,223,1) 15%);
+    --primary: rgb(57,153,200);
+    /* --secondary: ;
+    --highlight: ; */
+
 }
 
 /* Box sizing rules */
@@ -38,10 +43,13 @@ body {
   background-color: var(--background);
 }
 
-
 /* Make images easier to work with */
 img,
 picture {
   max-width: 100%;
   display: block;
 }
+
+/* .sidenav {
+
+} */

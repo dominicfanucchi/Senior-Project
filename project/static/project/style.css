@@ -1,10 +1,9 @@
 :root {
     --background: #212529;
-    --primary-gradient: linear-gradient(0deg, rgba(57,153,200,1) 0%, rgba(57,153,223,1) 15%);
+    --primary-gradient: linear-gradient(90deg, rgba(57,153,200,1) 0%, rgba(57,153,223,1) 15%);
     --primary: rgb(57,153,200);
-    /* --secondary: ;
-    --highlight: ; */
-
+    --secondary: ;
+    --highlight: ;
 }
 
 /* Box sizing rules */
@@ -39,8 +38,6 @@ body {
   min-height: 100vh;
   text-rendering: optimizeSpeed;
   line-height: 1.5;
-
-  background-color: var(--background);
 }
 
 /* Make images easier to work with */
@@ -50,6 +47,10 @@ picture {
   display: block;
 }
 
-/* .sidenav {
+.my-bg {
+    background-color: var(--primary);
+}
 
-} */
+.txt {
+    color: azure !important;
+}

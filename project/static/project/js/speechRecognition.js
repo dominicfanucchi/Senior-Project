@@ -38,6 +38,28 @@ if ("webkitSpeechRecognition" in window) {
   document.querySelector("#stop").onclick = () => {
     speechRecognition.stop();
   };
+  document.querySelector("#save").onclick = () => {
+    speechRecognition.stop();
+    saveFile();
+  };
+
+  function saveFile()
+  {
+    //alert(final_transcript)
+    var data = [];
+    data.push(final_transcript);
+
+    var data_string = JSON.stringify(data);
+    var file = new Blob([data_string],{type:"text"});
+  
+    //anchor tag for download link
+    var anchor = document.createElement("a");
+
+    anchor.href = URL.createObjectURL(file);
+    anchor.download = "SavedFile.txt";
+    anchor.click();
+  };
+  
 } else {
   console.log("Speech Recognition Not Available");
 }

@@ -7,6 +7,6 @@ urlpatterns = [
     path('', views.frontpage, name='frontpage'),
 
     path('speech/', views.speech, name='speech'),
-    # path(),
-
+    
+    path('nlp', views.nlp, name='nlp'),
 ]

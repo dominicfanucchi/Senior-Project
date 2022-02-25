@@ -1,0 +1,13 @@
+{% extends "project/base.html" %}
+
+{% block title %} Senior Project | NLP{% endblock %}
+
+{% block content %}
+<h1>NLP here</h1>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="run_script">Run script</button>
+</form>
+
+{% endblock%}

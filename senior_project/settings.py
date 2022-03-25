@@ -78,7 +78,8 @@ ASGI_APPLICATION = 'senior_project.asgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 DATABASES = {
-    # 'default': {
+    'default': 
+    # {
     #     'ENGINE': 'django.db.backends.sqlite3',
     #     'NAME': 'mydatabase',
     # } 

@@ -7,21 +7,32 @@
 
 {% block content %}
 <div class="mt-4" id="div_language">
-    <h2 class="mb-3 text-dark">Select Language</h2>
-    <select class="form-select bg-secondary text-dark" id="select_language" onchange="updateCountry()"></select>
-    <select class="form-select bg-secondary text-dark mt-2" id="select_dialect"></select>
-  </div>
-  <h2 class="mt-4 text-dark">Transcript</h2>
-  <div class="p-3" style="border: 1px solid gray; height: 300px; border-radius: 8px;">
-    <span id="final" class="text-dark"></span>
-    <span id="interim" class="text-secondary"></span>
-  </div>
-  <div class="mt-4">
-    <button class="btn btn-success" id="start">Start</button>
-    <button class="btn btn-danger" id="stop">Stop</button>
-    <button class="btn btn-primary" id="save">Save</button>
-    <p id="status" class="lead mt-3 text-dark" style="display: none">Listenting ...</p>
-  </div>
+  <h2 class="mb-3 text-dark">Select Language</h2>
+  <select class="form-select bg-secondary text-dark" id="select_language" onchange="updateCountry()"></select>
+  <select class="form-select bg-secondary text-dark mt-2" id="select_dialect"></select>
+</div>
+<h2 class="mt-4 text-dark">Transcript</h2>
+<div class="p-3" style="border: 1px solid gray; height: 300px; border-radius: 8px;">
+  <span id="final" class="text-dark"></span>
+  <span id="interim" class="text-secondary"></span>
+</div>
+<div class="mt-4">
+  <button class="btn btn-success" id="start">Start</button>
+  <button class="btn btn-danger" id="stop">Stop</button>
+  <button class="btn btn-primary" id="save">Save</button>
+  <p id="status" class="lead mt-3 text-dark" style="display: none">Listenting ...</p>
+</div>
+<br>
+<br>
+<h1>NLP here</h1>
+
+{% include 'project/main.py' %}
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" name="run_script">Run script</button>
+</form>
+
 {% endblock %}
 
 {% block page_script %}

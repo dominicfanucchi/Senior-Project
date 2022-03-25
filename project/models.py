@@ -18,6 +18,9 @@ class nlp(models.Model):
         ('ANALYZED', 'Analyzed')
     )
     name = models.CharField(max_length=100, null=True)
-    date_created = models.CharField(max_length=20000, null=True)
+    date_created = models.DateTimeField(auto_now_add=True, null=True)
     # category = models.CharField(max_length=100, null=True, )
     status = models.CharField(max_length=100, null=True, choices=STATUS)
+
+    def __str__(self):
+        return self.name

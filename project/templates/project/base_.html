@@ -34,6 +34,8 @@
     </div>
 </div>
 
- <script src = "./app.js"></script>
- <script type="text/javascript" src="{% static 'project/js/app.js' %}"></script>
+<script>
+    var csrftoken = '{{ csrf_token }}';
+</script>
+<script type="text/javascript" src="{% static 'project/js/app.js' %}"></script>
 </html>

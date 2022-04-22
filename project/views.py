@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.views.decorators.csrf import csrf_exempt
 from .models import *
 
 # Create your views here.
@@ -8,6 +9,7 @@ def frontpage(request):
 def speech(request):
     return render(request, 'project/speech.html')
 
+@csrf_exempt
 def chat(request):
     return render(request, 'project/base_.html')
 

@@ -48,7 +48,7 @@ class Chatbox {
         
 
         //set to localhost for now
-        fetch('http://127.0.0.1:5000/predict', {
+        fetch('http://127.0.0.1:8000/chat', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
@@ -86,8 +86,25 @@ class Chatbox {
         const chatmessage = chatbox.querySelector('.chatbox__messages');
         chatmessage.innerHTML = html;
     }
+
 }
 
+//getCookie(csrftoken)
+function getCookie(name) {
+    var cookieValue = null;
+    if (document.cookie && document.cookie != '') {
+        var cookies = document.cookie.split(';');
+        for (var i = 0; i < cookies.length; i++) {
+            var cookie = cookies[i].trim();
+            // Does this cookie string begin with the name we want?
+            if (cookie.substring(0, name.length + 1) == (name + '=')) {
+                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+                break;
+            }
+        }
+    }
+    return cookieValue;
+}
 
 const chatbox = new Chatbox();
 chatbox.display();

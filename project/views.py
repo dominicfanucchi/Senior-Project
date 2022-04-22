@@ -8,6 +8,9 @@ def frontpage(request):
 def speech(request):
     return render(request, 'project/speech.html')
 
+def chat(request):
+    return render(request, 'project/base_.html')
+
 def nlp(request):
     # if request.method == 'POST' and 'run_script' in request.POST:
     #     # import function to run

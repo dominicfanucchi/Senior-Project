@@ -1,6 +1,7 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href=style.css
+<link rel="stylesheet" href="{% static 'project/style_.css' %}">
 
 <head>
     <meta charset="UTF-8">
@@ -12,7 +13,7 @@
         <div class="chatbox__support">
             <div class="chatbox__header">
                 <div class="chatbox__image--header">
-                    <img src="{{ url_for('static', filename='images/CSUB_logo.png') }}" style="width:60px;height:auto;" alt="image">
+                    <img src="{% static 'project/images/CSUB_logo.png' %}" style="width:60px;height:auto;" alt="image">
                 </div>
                 <div class="chatbox__content--header">
                     <h4 class="chatbox__heading--header">NLP Chatbot</h4>
@@ -28,10 +29,11 @@
             </div>
         </div>
         <div class="chatbox__button">
-            <button><img src="{{ url_for('static', filename='images/CSUB_logo.png') }}" style="width:50px;height:auto;"/></button>
+            <button><img src="{% static 'project/images/CSUB_logo.png' %}" style="width:50px;height:auto;"/></button>
         </div>
     </div>
 </div>
 
  <script src = "./app.js"></script>
+ <script type="text/javascript" src="{% static 'project/js/app.js' %}"></script>
 </html>

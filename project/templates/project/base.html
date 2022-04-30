@@ -41,7 +41,35 @@
             {% endblock %}
         </div>
     </main>
-
+    <div class="container">
+        <div class="chatbox">
+            <div class="chatbox__support">
+                <div class="chatbox__header">
+                    <div class="chatbox__image--header">
+                        <img src="{% static 'project/images/CSUB_logo.png' %}" style="width:60px;height:auto;" alt="image">
+                    </div>
+                    <div class="chatbox__content--header">
+                        <h4 class="chatbox__heading--header">NLP Chatbot</h4>
+                        <p class="chatbox__description--header">Hi. I am a Bot. How can I help you?</p>
+                    </div>
+                </div>
+                <div class="chatbox__messages">
+                    <div></div>
+                </div>
+                <div class="chatbox__footer">
+                    <input type="text" name="var" placeholder="Write a message...">
+                    <button class="chatbox__send--footer send__button">Send</button>
+                </div>
+            </div>
+            <div class="chatbox__button">
+                <button><img src="{% static 'project/images/CSUB_logo.png' %}" style="width:50px;height:auto;"/></button>
+            </div>
+        </div>
+    </div>
+    
+     <script src = "./app.js"></script>
+     <script type="text/javascript" src="{% static 'project/js/app.js' %}"></script>
+     
     <footer class="footer mt-auto py-3 navbar navbar-expand-lg navbar-light my-bg">
         <div class="container">
             <div class="collapse navbar-collapse" id="navbarNav">

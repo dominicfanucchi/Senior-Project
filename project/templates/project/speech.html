@@ -26,13 +26,14 @@
 <br>
 <h1>NLP here</h1>
 
-{% include 'project/main.py' %}
+{% comment %} {% include 'project/main.py' %} {% endcomment %}
 
-<form method="post">
+<form action="{% url 'sr_project:chat' %}" method="POST">
     {% csrf_token %}
+    <span hidden id="final" name="transcript"></span>
     <button type="submit" name="run_script">Run script</button>
 </form>
-
+<p>{{trans}}</p>
 {% endblock %}
 
 {% block page_script %}

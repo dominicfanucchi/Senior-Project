@@ -48,7 +48,7 @@ class Chatbox {
         
 
         //set to localhost for now
-        fetch('http://127.0.0.1:8000/chat', {
+        fetch('http://127.0.0.1:8000/', {
             method: 'POST',
             body: JSON.stringify({ message: text1 }),
             mode: 'cors',
